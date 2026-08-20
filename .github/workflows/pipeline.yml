@@ -8,7 +8,7 @@ env:
   IMAGE_NAME: prabhu8088/sample-webapp
 
 jobs:
-  test:
+  build and push:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-       - name: Build Docker image
+      - name: Build Docker image
         run: |
           docker build \
             -t $IMAGE_NAME:${{ github.sha }} \
