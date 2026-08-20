@@ -8,7 +8,7 @@ env:
   IMAGE_NAME: prabhu8088/sample-webapp
 
 jobs:
-  build and push:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
